@@ -1,22 +1,17 @@
-
-# Azure Provider source and version being used
 terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">=3.40.0"
+      version = "~> 4.0"
     }
     random = {
       source  = "hashicorp/random"
-      version = ">=3.4.3"
+      version = "~> 3.0"
     }
   }
 }
 
 provider "azurerm" {
   features {}
-  # subscription_id = var.subscription_id
-}
-
-provider "random" {
+  subscription_id = var.subscription_id
 }
